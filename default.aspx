@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-
+    <title>Shan's Loan Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-    Mike's Mortgage Calculator
+    <h1>Shan's Mortgage Calculator </h1>
         
         <br /><br />
      
@@ -34,14 +34,20 @@
         <asp:Button ID="clearBtn" runat="server" Text="Clear" Width="96px" />
         
         <br /><br />
-                
+
+        <% If Not IsPostBack Then%>
+        <p>Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.</p>
+        <% else %>
+        <br />
+                          
         Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
         
         <br /><br />
-        
-        <asp:GridView ID="loanGridView" runat="server" />
-            
-        </div>
+        <asp:GridView ID="loanGridView" runat="server" CssClass="cssgridview">
+            <AlternatingRowStyle CssClass="alt" />
+        </asp:GridView> 
+        <% End If%>
+    </div>      
     </form>
 </body>
 </html>
