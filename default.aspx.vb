@@ -31,9 +31,6 @@ Partial Class _Default
         annualRate = CDbl(tbAnnualInterest.Text)
         term = CDbl(tbLoanTerm.Text)
 
-        'This section formats the loan input to currency.
-        tbLoanAmt.Text = FormatCurrency(loanAmount)
-
         'Converting the annual rate to a monthly rate by dividing by 100 * 12 (months in a year)
         interestRate = annualRate / (100 * 12)
 
