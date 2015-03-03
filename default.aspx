@@ -17,19 +17,22 @@
      
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Please enter the loan amount." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+        <asp:Label ID="Label1" runat="server" Text="**Please enter the loan amount" Visible="False"></asp:Label>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Please enter the correct loan amount." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
                   
         <br /><br />      
         
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
         
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="**Please enter the incorrect interest percentage." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+        <asp:Label ID="Label2" runat="server" Text="**Please enter the interest percentage." Visible="False"></asp:Label>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="**Please enter the correct interest percentage." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
         
         <br /><br />
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
         
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="**Please enter the correct kiab term." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+        <asp:Label ID="Label3" runat="server" Text="Please enter the term." Visible="False"></asp:Label>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="**Please enter the correct loan term." ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
         
         <br /><br />
 
